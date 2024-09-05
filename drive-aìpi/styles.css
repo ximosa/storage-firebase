@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+  background-color: #f0f0f0; /* Color de fondo del header */
+  padding: 1rem; /* Espaciado interno del header */
+  text-align: center; /* Centra el contenido del header */
+}
+
+header h1 {
+  margin: 0; /* Elimina el margen superior e inferior del h1 */
+  font-size: 1.8rem; /* Tamaño de fuente del h1 */
+}
+
+#auth-container {
+  margin-top: 1rem; /* Espacio entre el h1 y los botones de autenticación */
+}
+
+#auth-container button,
+#auth-container #user-info {
+  display: inline-block; /* Muestra los botones en línea */
+  margin: 0 0.5rem; /* Espacio entre los botones */
+  padding: 0.5rem 1rem; /* Espaciado interno de los botones */
+  border: none; /* Elimina el borde de los botones */
+  border-radius: 5px; /* Esquinas redondeadas para los botones */
+  background-color: #032004; /* Color de fondo de los botones */
+  color: white; /* Color del texto de los botones */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar el ratón por encima */
+}
+
+#user-info {
+  display: flex; /* Alinea los elementos del usuario en una fila */
+  align-items: center; /* Centra verticalmente los elementos del usuario */
+}
+
+#user-avatar {
+  margin-right: 0.5rem; /* Espacio entre el avatar y el nombre de usuario */
+}
+
+/* Estilos para pantallas pequeñas (menos de 768px) */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem; /* Reduce el tamaño del título en pantallas pequeñas */
+  }
+
+  #auth-container button,
+  #auth-container #user-info {
+    margin: 0.5rem 0; /* Ajusta el espacio entre botones en pantallas pequeñas */
+    display: block; /* Muestra los botones en bloque (uno debajo del otro) */
+    width: 100%; /* Ajusta el ancho de los botones al 100% */
+  }
+
+  #user-info {
+    flex-direction: column; /* Apila los elementos del usuario verticalmente */
+    align-items: flex-start; /* Alinea los elementos del usuario a la izquierda */
+  }
+
+  #user-avatar {
+    margin-bottom: 0.5rem; /* Espacio entre el avatar y el nombre de usuario */
+  }
+}
+
+#auth-container {
+    display: flex;
+    align-items: center;
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+}
+
+#user-avatar {
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+button {
+    background-color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+main {
+    padding: 2rem;
+}
+
+#folder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.folder {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.folder:hover {
+    transform: scale(1.05);
+}
+
+.folder img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+ width: 100%;
+    top: 0;
+    left: 0;
+min-height: 100%;    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+ 
+}
+
+.overlay-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    position: relative;
+overflow-y: auto;
+}
+
+#close-overlay, #cancel-create-folder{
+background-color: #032004;
+color: #f7f3f3;
+    position: absolute;
+    top: 1rem; 
+    right: 1rem;
+}
+#save-description {
+background-color: #032004;
+color: #f7f3f3;
+}
+#folder-description {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+}
+
+#file-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+#file-table th, #file-table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+#file-table th {
+    background-color: #f0f0f0;
+}
+
+#upload-container {
+    margin-top: 1rem;
+}
+
+#create-folder-overlay .overlay-content {
+    max-width: 400px;
+}
+#folder-title-input {
+    width: 60%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#folder-description-input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#confirm-create-folder, #cancel-create-folder {
+    margin-top: 1rem;
+}

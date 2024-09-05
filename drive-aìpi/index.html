@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compartir</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Webgae</h1>
+        <div id="auth-container">
+            <button id="login-button" style="display: none;">Entrar con google</button>
+            <div id="user-info" style="display: none;">
+                <img id="user-avatar" alt="User Avatar" width="32" height="32">
+                <span id="user-name"></span>
+                <button id="create-folder-button">Crear carpeta</button>
+                <button id="logout-button">Salir</button>
+            </div>
+        </div>
+<div id="login-message">
+    <p>Inicia sesión para crear y compartir tu propia carpeta.</p>
+  </div>
+    </header>
+
+    <main>
+        <div id="folder-grid"></div>
+    </main>
+
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <h2 id="folder-name"></h2>
+ <button id="save-description" style="display: block;">Guardar Descripcion</button>
+            <div id="folder-description" contenteditable="false"></div>
+           
+
+            <table id="file-table">
+                <thead>
+                    <tr>
+                        <th>Archivo</th>
+                        <th>Nombre</th>
+                        <th>Descarga</th>
+                    </tr>
+                </thead>
+                <tbody id="file-list"></tbody>
+            </table>
+            <div id="upload-container" style="display: none;">
+                <input type="file" id="file-input" multiple>
+                <button id="upload-button">Subir archivos</button>
+            </div>
+            <button id="close-overlay">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="create-folder-overlay" class="overlay">
+        <div class="overlay-content">
+            <h2>Crear carpetar</h2>
+<input type="text" id="folder-title-input" placeholder="Titulo de la carpeta">
+            <input type="text" id="folder-description-input" placeholder="Descripcion de la carpeta">
+            <button id="confirm-create-folder">Crear carpeta</button>
+            <button id="cancel-create-folder">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
