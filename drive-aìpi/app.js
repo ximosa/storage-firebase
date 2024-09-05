@@ -1,12 +1,6 @@
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyANXBnQ43pCFFRYUVHNpOK713b4MDRtDtY",
-  authDomain: "optimize-7e367.firebaseapp.com",
-  databaseURL: "https://optimize-7e367.firebaseio.com",
-  projectId: "optimize-7e367",
-  storageBucket: "optimize-7e367.appspot.com",
-  messagingSenderId: "612617009744",
-  appId: "1:612617009744:web:bda4ebe48c3d94778c2f55"
+tu configuracion firebase
 };
 
 // Inicializar Firebase
